@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 520" fill="none">
+  <defs>
+    <linearGradient id="shirtShadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#000" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.16"/>
+    </linearGradient>
+    <linearGradient id="shirtHighlight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <g opacity="1">
+    <path d="M130 72 L180 48 C194 62 208 68 220 68 C232 68 246 62 260 48 L310 72 L360 136 L323 166 L314 126 L296 146 L296 438 C296 462 279 478 255 478 H185 C161 478 144 462 144 438 V146 L126 126 L117 166 L80 136 Z"
+          fill="__GARMENT_COLOR__"/>
+    <path d="M130 72 L180 48 C194 62 208 68 220 68 C232 68 246 62 260 48 L310 72 L360 136 L323 166 L314 126 L296 146 L296 438 C296 462 279 478 255 478 H185 C161 478 144 462 144 438 V146 L126 126 L117 166 L80 136 Z"
+          fill="url(#shirtShadow)"/>
+
+    <path d="M171 71 C184 87 200 94 220 94 C240 94 256 87 269 71"
+          stroke="#ffffff" stroke-opacity="0.58" stroke-width="16" stroke-linecap="round"/>
+    <path d="M152 150 C152 259 152 367 152 439"
+          stroke="#ffffff" stroke-opacity="0.14" stroke-width="18" stroke-linecap="round"/>
+    <path d="M288 150 C288 259 288 367 288 439"
+          stroke="#000000" stroke-opacity="0.08" stroke-width="18" stroke-linecap="round"/>
+
+    <path d="M130 72 L180 48 C194 62 208 68 220 68 C232 68 246 62 260 48 L310 72"
+          stroke="#ffffff" stroke-opacity="0.35" stroke-width="6" stroke-linecap="round"/>
+    <path d="M144 430 C170 448 190 456 220 456 C250 456 270 448 296 430"
+          stroke="#000000" stroke-opacity="0.08" stroke-width="6" stroke-linecap="round"/>
+    <path d="M130 72 L80 136 L117 166 L126 126 L144 146"
+          stroke="#000000" stroke-opacity="0.12" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M310 72 L360 136 L323 166 L314 126 L296 146"
+          stroke="#000000" stroke-opacity="0.12" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <path d="M130 72 L180 48 C194 62 208 68 220 68 C232 68 246 62 260 48 L310 72 L360 136 L323 166 L314 126 L296 146 L296 438 C296 462 279 478 255 478 H185 C161 478 144 462 144 438 V146 L126 126 L117 166 L80 136 Z"
+          stroke="#000000" stroke-opacity="0.22" stroke-width="3" stroke-linejoin="round"/>
+
+    <path d="M160 110 C188 126 252 126 280 110"
+          stroke="url(#shirtHighlight)" stroke-width="20" stroke-linecap="round"/>
+  </g>
+</svg>
