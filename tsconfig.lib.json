@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2023",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationMap": true,
+    "stripInternal": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "verbatimModuleSyntax": true,
+    "rootDir": "src/designer",
+    "outDir": "dist/types"
+  },
+  "include": ["src/designer/**/*"],
+  "exclude": ["src/designer/**/*.test.ts", "src/designer/**/*.test.tsx"]
+}

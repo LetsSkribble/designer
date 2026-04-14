@@ -23,6 +23,10 @@ import {
   createExportVerificationPayload,
   type ExportVerificationManifest,
 } from './services/exportVerification'
+import {
+  buildMultipartExportPayload,
+  type MultipartExportPayload,
+} from './services/multipartExport'
 import type {
   DesignerConfig,
   DesignerWarning,
@@ -628,6 +632,32 @@ export const useExportPipeline = (
     verification,
     start,
     cancel,
+  }
+}
+
+export const useMultipartExport = (options: {
+  state: ProjectState
+  product: ProductTemplate
+  previewPlacementByAngle: Record<string, ExportPreviewPlacementCalibration>
+  verification?: ExportVerificationState
+}) => {
+  const buildPayload = useCallback(
+    (renderedItems: ExportArtifact[]): MultipartExportPayload => {
+      return buildMultipartExportPayload({
+        state: options.state,
+        product: options.product,
+        previewPlacementByAngle: options.previewPlacementByAngle,
+        renderedItems,
+        verification: options.verification,
+      })
+    },
+    [options.previewPlacementByAngle, options.product, options.state, options.verification],
+  )
+
+  return {
+    buildPayload,
+    toFormData: (renderedItems: ExportArtifact[]) => buildPayload(renderedItems).formData,
+    toSerializable: (renderedItems: ExportArtifact[]) => buildPayload(renderedItems).metadata,
   }
 }
 
