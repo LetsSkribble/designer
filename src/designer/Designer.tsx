@@ -626,7 +626,18 @@ const WarningCenter = ({ warnings }: WarningCenterProps) => {
   )
 }
 
-interface PreviewPanelProps {
+export interface PreviewPanelPreviewItem {
+  id: string
+  angleId: string
+  angleLabel: string
+  colorLabel: string
+  variant: 'mockup' | 'print-area'
+  dataUrl: string
+  width: number
+  height: number
+}
+
+export interface PreviewPanelProps {
   selectedColorIds: string[]
   angleLabels: string[]
   angleOptions: Array<{ id: string; label: string }>
@@ -641,19 +652,10 @@ interface PreviewPanelProps {
   lightingStrength: number
   onRealismStrengthChange: (value: number) => void
   onLightingStrengthChange: (value: number) => void
-  previews: Array<{
-    id: string
-    angleId: string
-    angleLabel: string
-    colorLabel: string
-    variant: 'mockup' | 'print-area'
-    dataUrl: string
-    width: number
-    height: number
-  }>
+  previews: PreviewPanelPreviewItem[]
 }
 
-const PreviewPanel = ({
+export const PreviewPanel = ({
   selectedColorIds,
   angleLabels,
   angleOptions,
@@ -783,16 +785,7 @@ const PreviewPanel = ({
 }
 
 interface PreviewCalibrationDebuggerProps {
-  previews: Array<{
-    id: string
-    angleId: string
-    angleLabel: string
-    colorLabel: string
-    variant: 'mockup' | 'print-area'
-    dataUrl: string
-    width: number
-    height: number
-  }>
+  previews: PreviewPanelPreviewItem[]
   activeAngleId: string
   activeCalibration: PreviewAngleCalibration
   printArea: PrintAreaBounds

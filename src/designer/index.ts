@@ -2,7 +2,12 @@ export * as core from './core'
 export * as react from './react'
 export * as debug from './debug'
 
-export { Designer } from './Designer'
+export {
+  Designer,
+  PreviewPanel,
+  type PreviewPanelProps,
+  type PreviewPanelPreviewItem,
+} from './Designer'
 export { DebugDesignerPanel, type DebugDesignerPanelProps } from './debug'
 export {
   DEFAULT_DESIGNER_CONFIG,

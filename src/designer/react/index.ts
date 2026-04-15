@@ -1,4 +1,9 @@
-export { Designer } from '../Designer'
+export {
+  Designer,
+  PreviewPanel,
+  type PreviewPanelProps,
+  type PreviewPanelPreviewItem,
+} from '../Designer'
 export {
   useAssetUpload,
   useAutosave,
